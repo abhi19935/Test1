@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='bootstrap.css')}}">
+	<link rel="stylesheet" type="text/css" href="https://rawgit.com/wenzhixin/bootstrap-table/master/src/bootstrap-table.css">
+	<title>
+		{% block pagetitle %} {% endblock %}
+	</title>
+</head>
+<body class= 'whole-page'>
+	<div class="container-fluid">
+		<div class="row pagehead">
+			<h1><a href="{{url_for('home')}}">Automation Center for EDI</a></h1>
+		</div>
+
+		<div class='row'>
+			<div class='col-md-2 nopadding'>
+				<ul class='navbar'>
+					
+					<!-- <li><a href="#" class='realToggle'>Batch Transaction</a></li>
+					<ul class='realTxns'>
+						<li><a href="http://apset2220.ms.ds.uhc.com/ace/ace.html" target="_blank">Batch Transaction Old</a></li>
+					</ul> -->
+					<li><a href="#" class='realToggle naviCheck'>Real Time Transaction</a></li>
+					<ul class='realTxns'>
+						<li><a href="{{url_for('real')}}" class="naviCheck">Create Requests</a></li>
+						<li><a href="{{ url_for('realBaselineTest')}}" class="naviCheck">Baseline Testing</a></li>
+						<li><a href="{{url_for('all_servers')}}" class="naviCheck">All Servers</a></li>
+						<li><a href="{{url_for('x12ToparsedXML')}}" class="naviCheck">Parse X12</a></li>
+					</ul>
+					<li><a href="#" class="realToggle naviCheck">Regression</a></li>
+					<ul class='realTxns'>
+						<li><a href="{{url_for('regressionreal')}}" class="naviCheck">Real Time</a></li>
+						<li><a href="{{url_for('batch')}}" class="naviCheck">Batch Transaction</a></li>
+					</ul>
+					
+					
+					<li><a href="{{url_for('contactUs')}}" class="naviCheck">Contact Us</a></li>
+					
+				</ul>
+			</div>
+
+			<div class='col-md-10 nopadding mainBody'>
+
+				{% block body %} {% endblock %}
+				
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="{{url_for('static', filename='ace.js')}}"></script>
+	 <!-- // <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+	<script   src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="   crossorigin="anonymous"></script> 
+	
+	<script src="https://rawgit.com/wenzhixin/bootstrap-table/master/src/bootstrap-table.js"></script>
+	<script src="{{url_for('static', filename='frame.js')}}"></script>
+	
+</body>
+</html>

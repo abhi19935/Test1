@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>{{page_owner}} library</title>
+         <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"> 
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Welcome to {{page_owner}} Page!</h1>
+	<div>	
+	<form action="{{ url_for('addrec') }}" method='post' name='form1'>
+	<fieldset>
+	<legend>Personal information:</legend>
+	Name:<br>
+	<input type='text' placeholder = 'Name' name='name'><br><br>
+	Contact Number:<br>
+	<input type='text' placeholder = 'Contact' name='contact'><br><br>
+	Address:<br>
+	<textarea name="address" rows="3" cols="20"></textarea><br><br>
+	Gender:<br>
+	<input type="radio" name="gender" value="male">Male<br>
+	<input type="radio" name="gender" value="female">Female<br><br>
+  	Sports Interested:<br>
+	<input type='text' placeholder = 'Sports' name='sports'><br><br>
+	
+	Member Status:<br>
+	<select name="status">
+  	<option value="active">Active</option>
+  	<option value="inactive">Inactive</option>
+  	
+	</select><br><br>
+	Comments:<br>
+	<textarea name="message" rows="10" cols="30"></textarea><br><br>
+	
+	<input type='submit' value='Submit'>
+	</fieldset>
+	</form>
+	</div>
+	<ul> 
+	<li> <a href = "/">Go back to home page</a> </li>
+	</ul>
+
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>{{page_owner}} library</title>
+        <style type="text/css">
+            h1 {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to {{page_owner}} Page!</h1>
+	<div>	
+	<form action='/' method='post' name='form1'>
+	<fieldset>
+	<legend>Personal information:</legend>
+	Name:<br>
+	<input type='text' placeholder = 'Name' name='name'><br>
+	Project:<br>
+	<input type='text' placeholder = 'Project' name='project'><br>
+	Car:<br>
+	<select name="cars">
+  	<option value="volvo">Volvo</option>
+  	<option value="saab">Saab</option>
+  	<option value="fiat">Fiat</option>
+  	<option value="audi">Audi</option>
+	</select><br>
+	Comments:<br>
+	<textarea name="message" rows="10" cols="30">
+	</textarea><br><br>
+	<input type='submit' value='Get Details'>
+	</fieldset>
+	</form>
+	</div>
+	<ul> 
+	<li> <a href="/contactus"> Contact Us </a> </li>
+	</ul>
+
+    </body>
+</html>

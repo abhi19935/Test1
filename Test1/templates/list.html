@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+   <body>
+      <table border = 1>
+         <thead>
+            <td>UID</td>
+			<td>Name</td>
+			<td>Contact</td>
+			<td>Member Status</td>
+            
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+			   <td>{{row["uid"]}}</td>
+               <td>{{row["name"]}}</td>
+               <td>{{row["contact_number"]}}</td>
+			   <td>{{row["member_status"]}}</td>
+               
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <a href = "/">Go back to home page</a>
+   </body>
+   </head>
+</html>
